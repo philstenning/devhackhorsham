@@ -1,0 +1,13 @@
+body {
+  background-color: #c82c61;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: ease-in-out;
+  background-size: cover;
+}
