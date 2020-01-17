@@ -2,14 +2,39 @@ import React from "react"
 
 import styled from "styled-components"
 
-import img1 from "../images/photos2020/computers.jpg"
+import fallbackHeroImage from "../images/photos2020/computers.jpg"
 import img2 from "../images/Photos2020/HH white large-Recovered.png"
 
 import colors from "../theme/colors"
 
+const HeroImage = ({ heroImage, tagLIneA, tagLIneB, gradientColor }) => {
+  const color = gradientColor ? gradientColor : { r: 200, g: 44, b: 97 }
+  const colorGradientStart = `rgba(${color.r}, ${color.g}, ${color.b}, 1)`
+  const colorGradientEnd = `rgba(${color.r}, ${color.g}, ${color.b}, .5)`
+
+  const image = heroImage ? heroImage : fallbackHeroImage
+  return (
+    <StyledHeroImage
+      heroImage={image}
+      colorStart={colorGradientStart}
+      colorEnd={colorGradientEnd}
+    >
+      <div className="overlay">
+        <div>
+          <h1 className="text">
+            {tagLIneA ? tagLIneA : "Building, Making, Learning."}
+          </h1>
+          <h1 className="handwriting--white">{tagLIneB ? tagLIneB : " "}</h1>
+          <img className="logo" src={img2} alt="" />
+        </div>
+      </div>
+    </StyledHeroImage>
+  )
+}
 const StyledHeroImage = styled.div`
   position: relative;
-  background: url(${img1}) ${colors.pink};
+
+  background: url(${props => props.heroImage}) ${colors.pink};
   width: 100%;
   height: 40vh;
   color: ${colors.background};
@@ -30,7 +55,10 @@ const StyledHeroImage = styled.div`
     box-sizing: border-box;
     min-width: 100%;
     min-height: 100%;
-    background: linear-gradient(rgba(200, 44, 96, 1), rgba(200, 44, 96, 0.5));
+    background: linear-gradient(
+      ${props => props.colorStart},
+      ${props => props.colorEnd}
+    );
     display: flex;
     flex-direction: column;
     padding: 2vh 0 0;
@@ -40,6 +68,8 @@ const StyledHeroImage = styled.div`
   h1 {
     min-height: 5vh;
     max-height: 8vh;
+    color: ${colors.background};
+    font-weight: 300;
   }
 
   .logo {
@@ -47,17 +77,4 @@ const StyledHeroImage = styled.div`
     padding-top: 1em;
   }
 `
-
-const HeroImage = () => (
-  <StyledHeroImage>
-    <div className="overlay">
-      <div>
-        <h1 className="text">Building, Making, Learning.</h1>
-        <h1 className="handwriting--white">for everyone</h1>
-        <img className="logo" src={img2} alt="" />
-      </div>
-    </div>
-  </StyledHeroImage>
-)
-
 export default HeroImage
