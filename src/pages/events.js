@@ -11,6 +11,7 @@ import Content from "../components/content"
 
 import feb2020 from "../images/events/feb_2020.jpg"
 import jan2020 from "../images/events/jan_2020.jpg"
+import dec19 from "../images/events/hh_december_2019.png"
 ///
 
 const Events = () => {
@@ -38,6 +39,17 @@ const Events = () => {
           image={jan2020}
           town="horsham"
           date="11th January 2020"
+          ticketsAddress="https://philstenning.com/event/jan"
+          onSale={false}
+        />
+        <Event
+          key="2019_12"
+          freeEvent={true}
+          title="december 2019"
+          workshopTitle=""
+          image={dec19}
+          town="horsham"
+          date="14th dECEMBER 2020"
           ticketsAddress="https://philstenning.com/event/jan"
           onSale={false}
         />

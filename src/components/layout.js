@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-
+import Footer from "./footer"
 import "typeface-montserrat"
 import "typeface-architects-daughter"
 import "typeface-poppins"
@@ -22,11 +22,11 @@ const Layout = ({ children }) => {
 
   return (
     <div className="wrapper">
-      <Header>Hack horsham</Header>
+      <Header />
 
       <main>{children}</main>
 
-      <footer>© {new Date().getFullYear()}, Hack Horsham</footer>
+      <Footer />
     </div>
   )
 }

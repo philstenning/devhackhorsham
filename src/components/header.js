@@ -33,14 +33,14 @@ const Ul = styled.ul`
     display: block;
     text-decoration: none;
 
-    padding: 0.5em;
+    padding: 0.2em;
     color: ${colors.background};
     text-transform: uppercase;
     font-weight: 500;
     transition: all 500ms;
     border: 2px solid transparent;
 
-    &:hover.item {
+    &:hover.nav_item {
       background-color: ${colors.background};
       color: ${colors.text};
       border: 2px ${colors.pink} solid;
@@ -49,6 +49,19 @@ const Ul = styled.ul`
   img {
     max-width: 40vw;
   }
+
+  @media (max-width: 40em) {
+    li {
+      display: block;
+      padding: 0.2em;
+    }
+    img {
+      max-width: 60vw;
+    }
+    a.nav_item {
+      /* display: none; */
+    }
+  }
 `
 
 const Header = ({ siteTitle }) => (
@@ -56,12 +69,12 @@ const Header = ({ siteTitle }) => (
     <nav>
       <Ul>
         <li>
-          <Link className="item" to="/">
+          <Link className="nav_item" to="/">
             home
           </Link>
         </li>
         <li>
-          <Link className="item" to="/events">
+          <Link className="nav_item" to="/events">
             events
           </Link>
         </li>
@@ -71,12 +84,12 @@ const Header = ({ siteTitle }) => (
           </Link>
         </li>
         <li>
-          <Link className="item" to="/blog">
+          <Link className="nav_item" to="/blog">
             blog
           </Link>
         </li>
         <li>
-          <Link className="item" to="/more">
+          <Link className="nav_item" to="/more">
             more
           </Link>
         </li>
