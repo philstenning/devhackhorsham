@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{moai:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),l=a.n(n),r=a("Bl7J"),i=a("byBv");t.default=function(){return l.a.createElement(r.a,null,l.a.createElement(i.a,{title:"more"}),l.a.createElement("article",null,l.a.createElement("div",null,"this is the More page")))}}}]);
+//# sourceMappingURL=component---src-pages-more-js-5974b34f594d46dbe28d.js.map
