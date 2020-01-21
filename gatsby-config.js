@@ -3,7 +3,7 @@ module.exports = {
     title: `Hack Horsham`,
     description: `Hack Horsham`,
     author: `@philstenning`,
-    pathPrefix: "/hackhorsham-2020",
+    pathPrefix: "/devhackhorsham",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
