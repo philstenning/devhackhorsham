@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroImage from "../components/heroImage"
+import Content from "../components/content"
 
 import heroImage from "../images/laptops.jpg"
 
@@ -14,7 +15,7 @@ const IndexPage = () => (
       gradientColor={{ r: 500, g: 55, b: 20 }}
       tagLIneB="for everyone"
     />
-    <article>
+    <Content>
       <h2>This is h2</h2>
 
       <p>
@@ -49,7 +50,7 @@ const IndexPage = () => (
         recusandae excepturi vel asperiores saepe earum incidunt. Iste, fuga
         hic.
       </p>
-    </article>
+    </Content>
   </Layout>
 )
 
