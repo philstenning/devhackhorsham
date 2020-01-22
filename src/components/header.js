@@ -49,6 +49,13 @@ const Ul = styled.ul`
   img {
     max-width: 40vw;
   }
+  //VyhiB1Jft2D^MbnAt7m2Dd##GFpB67dW#elvXc
+
+  .nav_active {
+    /* background-color: ${colors.background};
+    color: ${colors.pink}; */
+    border-bottom: 2px ${colors.background} solid;
+  }
 
   @media (max-width: 40em) {
     li {
@@ -69,12 +76,12 @@ const Header = ({ siteTitle }) => (
     <nav>
       <Ul>
         <li>
-          <Link className="nav_item" to="/">
+          <Link className="nav_item" to="/" activeClassName="nav_active">
             home
           </Link>
         </li>
         <li>
-          <Link className="nav_item" to="/events">
+          <Link className="nav_item" to="/events" activeClassName="nav_active">
             events
           </Link>
         </li>
@@ -84,12 +91,12 @@ const Header = ({ siteTitle }) => (
           </Link>
         </li>
         <li>
-          <Link className="nav_item" to="/blog">
+          <Link className="nav_item" to="/blog" activeClassName="nav_active">
             blog
           </Link>
         </li>
         <li>
-          <Link className="nav_item" to="/more">
+          <Link className="nav_item" to="/more" activeClassName="nav_active">
             more
           </Link>
         </li>
